@@ -23,7 +23,7 @@ function PayDetails({ log, tid }) {
       country,
     });
     try {
-      const response = await fetch("http://localhost:8000/book", {
+      const response = await fetch("https://irctc-crtv.onrender.com//book", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
