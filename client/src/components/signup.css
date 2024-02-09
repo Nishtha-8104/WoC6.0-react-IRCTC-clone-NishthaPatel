@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background:url("./pexels_videos_2435998.mp4") no-repeat center center;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: underline;
+}
+
+.main {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+label {
+  margin-bottom: 5px;
+  color: #6c757d;
+  font-weight: 600;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #ffffff;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.sign {
+  background-color: #ffffff;
+  color: #007bff;
+  border: 1px solid #007bff;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.sign:hover {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.ct {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.ct.show {
+  opacity: 1;
+}

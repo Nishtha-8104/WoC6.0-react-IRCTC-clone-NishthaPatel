@@ -1,0 +1,105 @@
+.profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .profile-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .profile-content {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .image-container {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .profile-image {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .content-container {
+    flex: 2;
+    padding: 0 40px;
+  }
+  
+  .info {
+    margin-bottom: 40px;
+  }
+  
+  .info h2 {
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .info ul {
+    padding: 0;
+  }
+  
+  .info li {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    color: #555;
+  }
+  
+  .info-label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .actions, .social-links {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .actions h2, .social-links h2 {
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .actions ul, .social-links ul {
+    padding: 0;
+  }
+  
+  .actions li, .social-links li {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    color: #555;
+  }
+  
+  .actions li:hover, .social-links li:hover {
+    cursor: pointer;
+    color: #007bff;
+  }
+  
+  .social-links a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .social-links a:hover {
+    text-decoration: underline;
+  }
+  
