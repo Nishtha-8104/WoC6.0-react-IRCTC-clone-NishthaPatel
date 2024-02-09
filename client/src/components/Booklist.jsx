@@ -4,7 +4,7 @@ import "./booklist.css";
 import Footer from "./footer";
 
 async function fetchBookList(username) {
-  const response = await fetch("http://localhost:8000/booklist", {
+  const response = await fetch("https://irctc-crtv.onrender.com/booklist", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -24,7 +24,7 @@ function Booklist() {
     try {
       const username = localStorage.getItem("username");
 
-      const response = await fetch("http://localhost:8000/cancel", {
+      const response = await fetch("https://irctc-crtv.onrender.com/cancel", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
