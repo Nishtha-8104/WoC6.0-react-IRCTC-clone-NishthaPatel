@@ -13,7 +13,7 @@ function SignUp() {
   async function handlechange() {
     if (username && password && email) {
       try {
-        const statusOfSignUp = await fetch("http://irctc-crtv.onrender.com/signup", {
+        const statusOfSignUp = await fetch("https://irctc-crtv.onrender.com/signup", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
