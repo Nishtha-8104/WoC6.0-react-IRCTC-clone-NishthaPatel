@@ -15,12 +15,15 @@ app.post("/signup", async (req, res) => {
   const { username, email, password } = req.body;
   try {
     const hashedPassword = md5(password);
+    const token = jwt.sign({ username },'HELLOWORLD', { expiresIn: "10" });
     console.log("($1, $2, $3)", [username, email, hashedPassword]);
     await pool.query(
       "INSERT INTO user_data (username, email, password) VALUES ($1, $2, $3)",
       [username, email, hashedPassword]
     );
-    res.status(200).json({ success: true });
+    res
+        .status(200)
+        .json({ success: true, message: "signup successful", token, username });
   } catch (err) {
     console.error(err);
     res.status(404).json({success:false});
@@ -61,7 +64,9 @@ app.post("/search", async (req, res) => {
   if (date != null) tdate = date.substring(0, 10);
 
   try {
-    console.log(tdate);
+    const source="Mumbai";
+    const destination="Delhi";
+    const tdate="2024-03-03";
     const result = await pool.query(
       "SELECT * FROM trains WHERE source = $1 AND destination = $2 AND date = $3",
       [source, destination, tdate]
@@ -115,7 +120,6 @@ app.post("/booklist", async (req, res) => {
       res.json({});
     }
   } catch (err) {
-    console.log("YASH");
     // console.error(err);
   }
 });
