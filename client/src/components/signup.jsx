@@ -83,7 +83,7 @@ function SignUp() {
           />
           <br />
           <Button onClick={handlechange}>
-            {isLoading ? "Loading..." : "Sign up"}
+            {isLoading ? "Signing Up..." : "Sign up"}
           </Button>
           <br />
           <br />
