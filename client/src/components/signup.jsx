@@ -10,10 +10,40 @@ function SignUp() {
   const [email, setEmail] = useState("");
   const navigate = useNavigate();
 
+  // async function handlechange() {
+  //   if (username && password && email) {
+  //     try {
+  //       const statusOfSignUp = await fetch("https://irctc-crtv.onrender.com/signup", {
+  //         method: "POST",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+
+  //         body: JSON.stringify({ username, email, password }),
+  //       });
+
+  //       if (statusOfSignUp.ok) {
+  //         localStorage.removeItem("token");
+  //         localStorage.removeItem("username");
+
+  //         const response = await statusOfSignUp.json();
+  //         localStorage.setItem("token", response.token);
+  //         localStorage.setItem("username", response.username);
+
+  //         setRegistered(true);
+  //       } 
+  //     } catch (error) {
+  //       console.log("Error posting data", error);
+  //       alert("Please these username or password is taken, add other username or password");
+  //     }
+  //   } else {
+  //     alert("Please enter all required information");
+  //   }
+  // }
   async function handlechange() {
     if (username && password && email) {
       try {
-        const statusOfSignUp = await fetch("https://irctc-crtv.onrender.com/signup", {
+        const statusOfSignUp = await fetch("https://irctc-woc.onrender.com/signup", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -29,12 +59,15 @@ function SignUp() {
           const response = await statusOfSignUp.json();
           localStorage.setItem("token", response.token);
           localStorage.setItem("username", response.username);
+          localStorage.setItem("email", email);
 
           setRegistered(true);
-        } 
+        } else {
+          setFalseuser("Username is taken!😕");
+        }
       } catch (error) {
         console.log("Error posting data", error);
-        alert("Please these username or password is taken, add other username or password");
+        alert("Error signing up");
       }
     } else {
       alert("Please enter all required information");
